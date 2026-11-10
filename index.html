@@ -1,27 +1,513 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-AR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Enosfera</title>
-  <meta name="description" content="Enosfera — próximamente.">
-  <style>
-    :root { color-scheme: light dark; --bg: #faf7f2; --fg: #1c1a17; --muted: #6b655c; }
-    @media (prefers-color-scheme: dark) { :root { --bg: #141210; --fg: #f3efe8; --muted: #a39c90; } }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
-      background: var(--bg); color: var(--fg);
-      font-family: ui-serif, Georgia, "Times New Roman", serif; text-align: center;
-    }
-    h1 { font-size: clamp(2.5rem, 9vw, 5rem); font-weight: 500; letter-spacing: -0.02em; margin: 0 0 12px; }
-    p { margin: 0; color: var(--muted); font-family: system-ui, sans-serif; font-size: 1rem; letter-spacing: 0.12em; text-transform: uppercase; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Enosfera para creadores · Hacé crecer tu comunidad</title>
+<meta name="description" content="Enosfera es el lugar propio de los creadores y productores del vino: sumá seguidores, vendé catas y contenido, y financiá tus proyectos con tu comunidad.">
+<!-- En revisión: sacar esta línea cuando la landing esté lista para difundirse. -->
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Petrona:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.469.0/font/lucide.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/landing.css">
 </head>
 <body>
-  <main>
-    <h1>Enosfera</h1>
-    <p>Próximamente</p>
-  </main>
+
+<header class="site-header">
+  <div class="site-header__in">
+    <a href="#inicio" aria-label="Enosfera, ir al inicio" class="site-header__logo focusable">
+      <span class="eno-logo"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><path d="M6.08 30 55.06 44A26 26 0 0 1 6.08 30Z" fill="var(--logo-liquid)"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--logo-ring)" stroke-width="6"/></svg><span style="font-size:23.4px">enosfera</span></span>
+    </a>
+    <nav aria-label="Secciones" class="site-nav">
+      <a class="focusable" href="#como-funciona">Cómo funciona</a>
+      <a class="focusable" href="#que-vender">Qué podés vender</a>
+      <a class="focusable" href="#preventas">Preventas</a>
+      <a class="focusable" href="#como-cobras">Cómo cobrás</a>
+      <a class="focusable" href="#preguntas">Preguntas</a>
+    </nav>
+    <button type="button" class="eno-btn eno-btn--primary eno-btn--sm" data-open>Postulate</button>
+  </div>
+</header>
+
+<main>
+
+<section id="inicio" class="sec sec--hero">
+  <div class="wrap cols" style="gap:56px">
+    <div style="flex:1 1 460px;min-width:0">
+      <div class="eyebrow" style="margin-bottom:20px">Para creadores y productores del vino</div>
+      <h1 class="h-hero">Hacé crecer tu comunidad del vino en un lugar propio.</h1>
+      <p class="lead" style="margin-top:24px;max-width:540px">Sumá seguidores, cuidá a los que ya tenés y financiá tus proyectos con ellos. Enosfera resuelve todo lo que necesitás para vender, cobrar y lanzar.</p>
+      <div style="margin-top:36px;display:flex;gap:12px;flex-wrap:wrap">
+        <button type="button" class="eno-btn eno-btn--primary" data-open>Postulate como creador<i class="eno-icon icon-arrow-right" style="font-size:18px" aria-hidden="true"></i></button>
+        <a class="eno-btn eno-btn--secondary" href="#como-funciona">Ver cómo funciona</a>
+      </div>
+      <p class="xs tm" style="margin:20px 0 0">En el lanzamiento se entra por postulación. Leemos cada una.</p>
+    </div>
+
+    <div class="hero-mock" role="img" aria-label="Ejemplo del perfil de una sommelier en Enosfera, con su próxima cata y el aviso de una reserva nueva">
+      <div class="hero-photo"><div class="eno-ph" style="aspect-ratio:42/64"><span>Sommelier sirviendo en una mesa larga, manos y copas, luz de tarde</span></div></div>
+      <div class="phone" aria-hidden="true">
+        <div class="phone__bar">
+          <span class="eno-logo"><svg width="22" height="22" viewBox="0 0 64 64"><path d="M6.08 30 55.06 44A26 26 0 0 1 6.08 30Z" fill="var(--logo-liquid)"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--logo-ring)" stroke-width="6"/></svg><span style="font-size:17.16px">enosfera</span></span>
+          <span class="eno-btn eno-btn--tertiary eno-btn--sm">Entrar</span>
+        </div>
+        <div class="eno-ph" style="aspect-ratio:360/88"><span>Portada: Lucía sirviendo en una mesa larga</span></div>
+        <div style="padding:0 20px">
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-top:-34px;position:relative;z-index:1">
+            <span class="eno-avatar eno-avatar--ring" style="width:76px;height:76px;font-size:30.4px">LB</span>
+            <span class="eno-btn eno-btn--primary eno-btn--sm"><i class="eno-icon icon-user-plus" style="font-size:16px"></i>Seguir</span>
+          </div>
+          <div style="margin:12px 0 2px;font:700 28px/32px var(--font-display);letter-spacing:-0.02em">Lucía Barrera</div>
+          <div class="xs t2" style="display:flex;align-items:center;gap:6px"><i class="eno-icon icon-map-pin" style="font-size:15px"></i>Sommelier · Luján de Cuyo, Mendoza</div>
+          <div class="xs t2" style="margin-top:8px;display:flex;gap:18px"><span><b style="color:var(--text)">2.480</b> seguidores</span><span><b style="color:var(--text)">3</b> experiencias</span></div>
+          <div style="margin:14px 0 8px;font:600 22px/28px var(--font-display)">Próximas experiencias</div>
+          <article class="eno-card eno-exp">
+            <div class="eno-exp__media">
+              <div class="eno-ph"><span>Mesa larga, copas servidas, luz de tarde</span></div>
+              <div class="eno-exp__tags"><span class="eno-tag eno-tag--ultimos"><i class="eno-icon icon-flame"></i>Últimos cupos</span></div>
+              <div class="eno-exp__date"><b>14</b><span>DIC</span></div>
+            </div>
+            <div class="eno-exp__body">
+              <div><h3>Cata de malbec de altura</h3></div>
+              <div class="eno-exp__meta"><span><i class="eno-icon icon-calendar-days"></i>Sáb · 19:00</span><span><i class="eno-icon icon-map-pin"></i>Chacras de Coria</span><span><i class="eno-icon icon-users"></i>Quedan 4 de 12 cupos</span></div>
+              <div class="eno-exp__foot"><span class="eno-pricebox"><small>Precio final</small><b>$ 38.000</b></span><span class="eno-btn eno-btn--primary eno-btn--sm">Reservá tu lugar</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="hero-toast" aria-hidden="true">
+        <div class="eno-notice eno-notice--success"><i class="eno-icon icon-circle-check"></i><div><b>Carolina reservó su lugar</b><p>Cata de malbec de altura. Ya está en tu lista de asistentes.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--88 sec--white">
+  <div class="wrap">
+    <h2 class="h-sec" style="max-width:760px">Las redes te dan alcance. El resto lo venís resolviendo a mano.</h2>
+    <div class="rule-grid">
+      <div class="rule"><h3 class="h-card">Tenés seguidores, pero no un ingreso</h3><p>Te leen, te escuchan y te preguntan qué descorchar. Las redes no te pagan por lo que sabés.</p></div>
+      <div class="rule"><h3 class="h-card">Vendés tus catas a mano</h3><p>Mensajes para coordinar, transferencias para cobrar, un Drive para el curso y una planilla para saber quién viene.</p></div>
+      <div class="rule rule--accent"><h3 class="h-card">Lo nuevo sale de tu bolsillo</h3><p>Para lanzar una línea o un proyecto dependés de tus ahorros o de un banco, aunque tu gente ya lo esté esperando.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" class="sec">
+  <div class="wrap cols">
+    <div style="flex:1 1 480px;min-width:0">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2 class="h-sec" style="margin-top:12px">Todo lo que hoy armás suelto, en un solo lugar.</h2>
+      <p class="lead" style="margin-top:16px;max-width:540px">Vos sumás gente y la cuidás. Enosfera pone lo demás.</p>
+      <div class="benefits">
+        <div class="benefit"><i class="eno-icon icon-circle-user-round" aria-hidden="true"></i><div><b>Tu espacio propio</b><p>Tu marca personal adelante, con tu link para la bio.</p></div></div>
+        <div class="benefit"><i class="eno-icon icon-image" aria-hidden="true"></i><div><b>Publicaciones gratis y exclusivas</b><p>Texto, fotos y videos cortos.</p></div></div>
+        <div class="benefit"><i class="eno-icon icon-wine" aria-hidden="true"></i><div><b>Experiencias con cupos</b><p>La lista de asistentes se arma sola.</p></div></div>
+        <div class="benefit"><i class="eno-icon icon-ticket" aria-hidden="true"></i><div><b>Preventas con meta mínima</b><p>Tu comunidad compra por anticipado.</p></div></div>
+        <div class="benefit"><i class="eno-icon icon-wallet" aria-hidden="true"></i><div><b>Cobro directo a tu cuenta</b><p>Por Mercado Pago, sin que nadie retenga tu plata.</p></div></div>
+        <div class="benefit"><i class="eno-icon icon-receipt-text" aria-hidden="true"></i><div><b>Comprobantes y devoluciones</b><p>Los gestiona la plataforma.</p></div></div>
+        <div class="benefit"><i class="eno-icon icon-chart-column" aria-hidden="true"></i><div><b>Métricas de tu comunidad</b><p>Quién te sigue, qué se lee, cómo vienen tus reservas.</p></div></div>
+      </div>
+    </div>
+
+    <div class="panel" role="img" aria-label="Ejemplo del panel del creador: seguidores, lecturas, reservas, próxima experiencia y ventas recientes">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="eno-avatar" style="width:44px;height:44px;font-size:17.6px">LB</span>
+        <div style="flex:1;min-width:0"><div class="eyebrow eyebrow--muted">Tu panel</div><div style="font:600 22px/28px var(--font-display)">Hola, Lucía</div></div>
+        <span class="eno-btn eno-btn--primary eno-btn--sm"><i class="eno-icon icon-plus" style="font-size:16px"></i>Publicar</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><small>Seguidores</small><b>2.480</b><small style="color:var(--success)">86 nuevos este mes</small></div>
+        <div class="stat"><small>Lecturas</small><b>9.320</b><small>últimos 30 días</small></div>
+        <div class="stat"><small>Reservas</small><b>31</b><small>este mes</small></div>
+      </div>
+      <div class="card" style="padding:16px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px">
+          <div><div style="font:500 12px/16px var(--font-body);color:var(--text-muted)">Tu próxima experiencia</div><div style="margin-top:2px;font:600 20px/26px var(--font-display)">Cata de malbec de altura</div><div class="xs t2">Sáb 14 de diciembre · 19:00</div></div>
+          <span class="eno-tag eno-tag--ultimos"><i class="eno-icon icon-flame"></i>Últimos cupos</span>
+        </div>
+        <div class="bar" style="margin-top:14px"><div style="width:66.6%"></div></div>
+        <div class="xs t2" style="margin-top:8px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap"><span style="display:inline-flex;align-items:center;gap:6px"><i class="eno-icon icon-users" style="font-size:16px;color:var(--text-muted)"></i>8 de 12 cupos reservados</span><span class="link-like">Ver lista de asistentes</span></div>
+      </div>
+      <div class="card" style="padding:4px 16px">
+        <div class="sale"><i class="eno-icon icon-wine"></i><div><b>Carolina M. reservó su lugar</b>Cata de malbec de altura · hace 20 min</div><span class="eno-tag eno-tag--gratis"><i class="eno-icon icon-check"></i>Cobrado</span></div>
+        <div class="sale"><i class="eno-icon icon-lock"></i><div><b>Julián R. desbloqueó una publicación</b>Mis 5 malbec del año · hoy</div><span class="eno-tag eno-tag--gratis"><i class="eno-icon icon-check"></i>Cobrado</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="que-vender" class="sec sec--sunken">
+  <div style="max-width:1320px;margin:0 auto">
+    <div class="wrap">
+      <div class="eyebrow">Qué podés vender</div>
+      <h2 class="h-sec" style="margin-top:12px">Cuatro maneras de usar tu espacio.</h2>
+      <p class="tm" style="margin:12px 0 0">Los creadores y los productos de los ejemplos son ficticios.</p>
+    </div>
+    <div class="sell-grid">
+
+      <div class="sell">
+        <div>
+          <h3 class="sell__t"><i class="eno-icon icon-wine" aria-hidden="true"></i>Catas y experiencias</h3>
+          <p>Catas presenciales u online, visitas a bodega y maridajes, con fecha, cupos y lista de asistentes automática.</p>
+          <p class="ex"><b>Lucía, sommelier,</b> llena una cata de 12 cupos sin coordinar nada por WhatsApp.</p>
+        </div>
+        <article class="eno-card eno-exp" aria-hidden="true">
+          <div class="eno-exp__media">
+            <div class="eno-ph"><span>Mesa larga, copas servidas, luz de tarde</span></div>
+            <div class="eno-exp__tags"><span class="eno-tag eno-tag--ultimos"><i class="eno-icon icon-flame"></i>Últimos cupos</span></div>
+            <div class="eno-exp__date"><b>14</b><span>DIC</span></div>
+          </div>
+          <div class="eno-exp__body">
+            <div><h3>Cata de malbec de altura</h3><div class="eno-exp__by">con Lucía Barrera</div></div>
+            <div class="eno-exp__meta"><span><i class="eno-icon icon-calendar-days"></i>Sáb · 19:00</span><span><i class="eno-icon icon-map-pin"></i>Chacras de Coria</span><span><i class="eno-icon icon-users"></i>Quedan 4 de 12 cupos</span></div>
+            <div class="eno-exp__foot"><span class="eno-pricebox"><small>Precio final</small><b>$ 38.000</b></span><span class="eno-btn eno-btn--primary eno-btn--sm">Reservá tu lugar</span></div>
+          </div>
+        </article>
+      </div>
+
+      <div class="sell">
+        <div>
+          <h3 class="sell__t"><i class="eno-icon icon-video" aria-hidden="true"></i>Cursos y contenido exclusivo</h3>
+          <p>Publicaciones pagas con texto, fotos y videos cortos. Se desbloquean con un pago único.</p>
+          <p class="ex"><b>Tomás, enólogo,</b> vende su guía para iniciarse en la cata, con videos.</p>
+        </div>
+        <article class="eno-card eno-post" aria-hidden="true">
+          <header class="eno-post__head"><span class="eno-avatar" style="width:40px;height:40px;font-size:16px">TI</span><div class="eno-post__who"><b>Tomás Ibarra</b><span>Enólogo · Ayer</span></div><span class="eno-tag eno-tag--exclusivo"><i class="eno-icon icon-lock"></i>Exclusivo</span></header>
+          <div style="position:relative"><div class="eno-ph" style="aspect-ratio:16/9"><span>Video: Tomás sirviendo una copa en la bodega</span></div><span class="eno-post__play"><i class="eno-icon icon-play" style="font-size:24px"></i></span></div>
+          <div class="eno-post__body"><h3>Guía para iniciarte en la cata, en 6 videos</h3></div>
+          <div class="eno-lock">
+            <div class="eno-lock__preview">Empezamos por lo más simple: mirar, oler y probar sin apuro. En el primer video te muestro cómo servir y qué buscar en la copa antes de dar el primer sorbo…</div>
+            <div class="eno-lock__panel">
+              <div class="eno-lock__row"><span class="eno-lock__ico"><i class="eno-icon icon-lock" style="font-size:18px"></i></span><div><b>Publicación exclusiva</b><span>Pago único · Precio final</span></div></div>
+              <span class="eno-btn eno-btn--primary eno-btn--block">Desbloqueá por $ 9.500</span>
+            </div>
+          </div>
+          <footer class="eno-post__foot"><span class="eno-post__act"><i class="eno-icon icon-heart"></i>210</span><span class="eno-post__act"><i class="eno-icon icon-message-circle"></i>31</span><span style="flex:1"></span><span class="eno-post__act"><i class="eno-icon icon-share-2"></i></span></footer>
+        </article>
+      </div>
+
+      <div class="sell">
+        <div>
+          <h3 class="sell__t"><i class="eno-icon icon-ticket" aria-hidden="true"></i>Preventa de nuevas líneas</h3>
+          <p>Tu comunidad compra por anticipado y vos producís con esa base.</p>
+          <p class="ex"><b>Finca Dos Acequias</b> financia los insumos de su nueva línea con la preventa a su comunidad.</p>
+        </div>
+        <div class="card" style="overflow:hidden">
+          <div style="position:relative">
+            <div class="eno-ph" style="aspect-ratio:16/9"><span>Racimos de criolla en cajones, cosecha</span></div>
+            <div style="position:absolute;left:12px;top:12px"><span class="eno-tag eno-tag--exclusivo"><i class="eno-icon icon-ticket"></i>Preventa</span></div>
+          </div>
+          <div style="padding:14px 16px 16px;display:flex;flex-direction:column;gap:10px">
+            <div><div style="font:600 21px/26px var(--font-display)">Criolla, primera cosecha</div><div class="xs t2">de Finca Dos Acequias</div></div>
+            <div class="bar"><div style="width:86%"></div></div>
+            <div class="xs t2" style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><span><b style="color:var(--text)">258</b> de 300 botellas</span><span>Cierra el 28 de febrero</span></div>
+            <div style="padding-top:10px;border-top:1px solid var(--border)"><a href="#preventas" style="font:600 14px/20px var(--font-body)">Mirá cómo funciona una preventa</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sell">
+        <div>
+          <h3 class="sell__t"><i class="eno-icon icon-heart" aria-hidden="true"></i>Comunidad gratis</h3>
+          <p>También podés usar Enosfera solo para reunir y cuidar a tu gente, sin vender nada.</p>
+          <p class="ex"><b>Empezás gratis.</b> Los datos fiscales te los pedimos recién cuando quieras vender.</p>
+        </div>
+        <article class="eno-card eno-post" aria-hidden="true">
+          <header class="eno-post__head"><span class="eno-avatar" style="width:40px;height:40px;font-size:16px">VD</span><div class="eno-post__who"><b>Vinos del Pedemonte</b><span>Productores · Hace 3 h</span></div></header>
+          <div style="position:relative"><div class="eno-ph" style="aspect-ratio:4/3"><span>Manos podando una vid en invierno, luz de mañana</span></div></div>
+          <div class="eno-post__body"><h3>Arrancó la poda</h3><p>Hoy empezamos con el cuartel más viejo. Les vamos mostrando cómo viene.</p></div>
+          <footer class="eno-post__foot"><span class="eno-post__act"><i class="eno-icon icon-heart"></i>86</span><span class="eno-post__act"><i class="eno-icon icon-message-circle"></i>12</span><span style="flex:1"></span><span class="eno-post__act"><i class="eno-icon icon-share-2"></i></span></footer>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="preventas" data-theme="dark" class="sec sec--112 sec--theme">
+  <div class="wrap">
+    <div style="max-width:820px">
+      <div class="eyebrow">Preventas</div>
+      <h2 class="h-hero" style="margin-top:12px">Financiá tu próximo proyecto con tu comunidad.</h2>
+      <p class="lead" style="margin-top:20px">Lanzás una línea nueva y tu gente la compra por anticipado. Con eso cubrís insumos y producción antes de embotellar, sin poner todo de tu bolsillo.</p>
+    </div>
+
+    <div style="margin-top:56px;display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
+      <div style="flex:1 1 440px;min-width:0">
+        <div class="step"><span>1</span><div><b>Fijás una meta mínima y una fecha límite</b><p>Si la meta no se alcanza, no se le cobra a nadie.</p></div></div>
+        <div class="step"><span>2</span><div><b>Cada compra genera un vale digital único</b><p>Va a nombre de quien compra. Lo puede regalar o transferir, y lo canjea por sus botellas cuando están listas.</p></div></div>
+        <div class="step"><span>3</span><div><b>Cada vale es auténtico y trazable</b><p>Se puede seguir desde la preventa hasta el canje.</p></div></div>
+        <div class="step"><span>4</span><div><b>Tu comunidad acompaña desde el primer día</b><p>Le contás cómo viene la cosecha, la elaboración y el embotellado.</p></div></div>
+        <div style="margin-top:28px;padding:20px;border-radius:12px;background:var(--primary-soft)">
+          <b style="font:600 16px/22px var(--font-body)">Pensada para el vino argentino</b>
+          <p class="sm t2" style="margin:4px 0 0">Las plataformas internacionales de financiamiento colectivo no permiten lanzar campañas desde Argentina ni ofrecer vino como recompensa. Enosfera nace para resolver eso.</p>
+        </div>
+        <div style="margin-top:32px"><button type="button" class="eno-btn eno-btn--primary" data-open="preventa">Quiero lanzar una preventa<i class="eno-icon icon-arrow-right" style="font-size:18px" aria-hidden="true"></i></button></div>
+      </div>
+
+      <div style="flex:1 1 440px;min-width:0;display:flex;flex-direction:column;gap:20px">
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="eno-avatar" style="width:44px;height:44px;font-size:17.6px" aria-hidden="true">FD</span>
+            <div style="flex:1;min-width:0"><div class="xxs tm">Preventa de Finca Dos Acequias</div><div style="font:600 24px/30px var(--font-display)">Criolla, primera cosecha</div></div>
+          </div>
+          <p class="sm t2" style="margin:14px 0 0">Caja de 3 botellas de criolla, una uva histórica de Mendoza, de un parral de 60 años.</p>
+          <div style="margin-top:20px"><span class="num" style="font:700 26px/32px var(--font-body)">258 <span class="sm t2">de 300 botellas de meta mínima</span></span></div>
+          <div role="img" aria-label="212 botellas confirmadas y 46 reservadas, sobre una meta mínima de 300" style="margin-top:10px;display:flex;height:14px;border-radius:999px;background:var(--surface-sunken);overflow:hidden"><div style="width:70.6%;background:var(--primary)"></div><div style="width:15.4%;background:var(--tinta-400)"></div></div>
+          <div class="xs t2" style="margin-top:12px;display:flex;gap:20px;flex-wrap:wrap">
+            <span style="display:inline-flex;align-items:center;gap:8px"><span class="dot"></span><span><b style="color:var(--text)">212</b> confirmadas</span></span>
+            <span style="display:inline-flex;align-items:center;gap:8px"><span class="dot" style="background:var(--tinta-400)"></span><span><b style="color:var(--text)">46</b> reservadas</span></span>
+          </div>
+          <div style="margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px">
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="eno-icon icon-calendar-days tm" aria-hidden="true"></i><div class="kv">Fecha límite<b>28 de febrero</b></div></div>
+            <div style="display:flex;gap:10px;align-items:flex-start"><i class="eno-icon icon-package tm" aria-hidden="true"></i><div class="kv">Entrega estimada<b>Octubre de 2027</b></div></div>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border);display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <span class="eno-pricebox"><small>Precio final · caja de 3</small><b>$ 54.000</b></span>
+            <span class="eno-btn eno-btn--primary eno-btn--sm" aria-hidden="true">Comprá por anticipado</span>
+          </div>
+        </div>
+
+        <div class="card" style="overflow:hidden">
+          <div style="padding:20px 24px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <div><div class="eyebrow eyebrow--muted" style="display:flex;align-items:center;gap:8px"><i class="eno-icon icon-ticket" style="font-size:16px" aria-hidden="true"></i>Vale digital</div><div class="num" style="margin-top:6px;font:700 22px/28px var(--font-body);letter-spacing:.02em">N.º ENO-0427-1183</div></div>
+            <span class="eno-tag eno-tag--gratis"><i class="eno-icon icon-check" aria-hidden="true"></i>Confirmado</span>
+          </div>
+          <div style="border-top:1.5px dashed var(--border-strong);padding:20px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px">
+            <div class="kv">Producto<b>Criolla, primera cosecha · caja de 3</b></div>
+            <div class="kv">Creador<b>Finca Dos Acequias</b></div>
+            <div class="kv">A nombre de<b>Carolina Méndez</b></div>
+          </div>
+          <div style="padding:0 24px 20px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font:600 13px/18px var(--font-body)">
+            <span class="t2" style="display:inline-flex;align-items:center;gap:6px"><i class="eno-icon icon-circle-check" style="font-size:16px;color:var(--success)" aria-hidden="true"></i>Reservado</span>
+            <span style="flex:1;min-width:16px;height:2px;background:var(--success)"></span>
+            <span style="display:inline-flex;align-items:center;gap:6px"><i class="eno-icon icon-circle-check" style="font-size:16px;color:var(--success)" aria-hidden="true"></i>Confirmado</span>
+            <span style="flex:1;min-width:16px;height:2px;background:var(--border-strong)"></span>
+            <span class="t2" style="display:inline-flex;align-items:center;gap:6px"><i class="eno-icon icon-circle" style="font-size:16px" aria-hidden="true"></i>Canjeado</span>
+          </div>
+          <div style="padding:14px 24px;background:var(--surface-sunken);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+            <span class="xxs t2">Lo canjeás por tus botellas cuando estén listas.</span>
+            <span class="eno-btn eno-btn--secondary eno-btn--sm" aria-hidden="true"><i class="eno-icon icon-gift" style="font-size:16px"></i>Regalar o transferir</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap cols">
+    <div class="rings" id="rings" role="img" aria-label="Tu comunidad conectada con las comunidades de otros dos creadores">
+      <svg viewBox="0 0 480 380" aria-hidden="true">
+        <circle cx="240" cy="215" r="112" fill="none" stroke="var(--border-strong)" stroke-width="1.5"/>
+        <circle cx="86" cy="84" r="64" fill="none" stroke="var(--border-strong)" stroke-width="1.5"/>
+        <circle cx="400" cy="92" r="64" fill="none" stroke="var(--border-strong)" stroke-width="1.5"/>
+        <line x1="205" y1="185" x2="112" y2="106" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 6"/>
+        <line x1="277" y1="187" x2="374" y2="112" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 6"/>
+      </svg>
+      <span class="eno-avatar eno-avatar--ring" style="position:absolute;left:198px;top:173px;width:84px;height:84px;font-size:33.6px">LB</span>
+      <span class="eno-avatar" style="position:absolute;left:58px;top:56px;width:56px;height:56px;font-size:22.4px">TI</span>
+      <span class="eno-avatar" style="position:absolute;left:372px;top:64px;width:56px;height:56px;font-size:22.4px">FD</span>
+      <span class="lbl" style="left:190px;top:340px;width:100px;font:600 14px/20px var(--font-body)">Tu comunidad</span>
+      <span class="lbl t2" style="left:16px;top:154px;width:140px;font:500 13px/18px var(--font-body)">La de un enólogo</span>
+      <span class="lbl t2" style="left:330px;top:162px;width:140px;font:500 13px/18px var(--font-body)">La de una finca</span>
+    </div>
+    <div style="flex:1 1 440px;min-width:0">
+      <h2 class="h-sec">Tu comunidad crece cuando se junta con otras.</h2>
+      <div class="rows rows--lg" style="margin-top:28px">
+        <div class="row"><i class="eno-icon icon-user-plus" aria-hidden="true"></i><div><b>Tus seguidores te siguen adentro</b><p>Compartís tu link y tu gente llega directo a tu espacio.</p></div></div>
+        <div class="row"><i class="eno-icon icon-bell" aria-hidden="true"></i><div><b>Se enteran de todo lo que hacés</b><p>Reciben un aviso cada vez que publicás, abrís una experiencia o lanzás una preventa.</p></div></div>
+        <div class="row"><i class="eno-icon icon-compass" aria-hidden="true"></i><div><b>Otras comunidades te descubren</b><p>Tu gente conoce a otros creadores, y la gente de ellos te puede conocer a vos.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-cobras" class="sec sec--white">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:64px;align-items:flex-start">
+    <div style="flex:1 1 460px;min-width:0">
+      <div class="eyebrow">Cómo cobrás</div>
+      <h2 class="h-sec" style="margin-top:12px">La plata va directo a tu cuenta.</h2>
+      <div class="rows" style="margin-top:28px">
+        <div class="row"><i class="eno-icon icon-link" aria-hidden="true"></i><div><b>Conectás tu cuenta de Mercado Pago</b></div></div>
+        <div class="row"><i class="eno-icon icon-tag" aria-hidden="true"></i><div><b>Ponés tu precio</b></div></div>
+        <div class="row"><i class="eno-icon icon-wallet" aria-hidden="true"></i><div><b>Tu comunidad paga dentro de Enosfera</b><p>Y la plata llega a tu cuenta, sin intermediarios que la retengan.</p></div></div>
+        <div class="row"><i class="eno-icon icon-shopping-bag" aria-hidden="true"></i><div><b>El cargo por servicio lo paga quien compra</b><p>Ya está incluido en el precio final que ve.</p></div></div>
+        <div class="row"><i class="eno-icon icon-receipt-text" aria-hidden="true"></i><div><b>De tu lado, solo la comisión de Mercado Pago</b></div></div>
+        <div class="row"><i class="eno-icon icon-ticket" aria-hidden="true"></i><div><b>En las preventas, el cobro se confirma al llegar a la meta</b></div></div>
+      </div>
+    </div>
+    <div class="example">
+      <span class="eno-tag eno-tag--neutral">Ejemplo ilustrativo</span>
+      <h3 class="h-card" style="margin:12px 0 20px">Una cata a $ 50.000</h3>
+      <div class="card">
+        <div class="eyebrow eyebrow--muted">Lo que cargás vos</div>
+        <div style="margin-top:8px;display:flex;align-items:baseline;justify-content:space-between;gap:12px"><span class="t2">Tu precio</span><b class="num" style="font:700 22px/28px var(--font-body)">$ 50.000</b></div>
+      </div>
+      <div class="arrow"><i class="eno-icon icon-arrow-down" aria-hidden="true"></i></div>
+      <div class="card">
+        <div class="eyebrow eyebrow--muted">Lo que ve tu comunidad</div>
+        <div style="margin-top:8px;display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap">
+          <span class="eno-pricebox"><small>Precio final</small><b>$ 55.000</b></span>
+          <span class="eno-btn eno-btn--primary eno-btn--sm" aria-hidden="true">Reservá tu lugar</span>
+        </div>
+        <p class="xxs tm" style="margin:10px 0 0">Incluye el cargo por servicio. No hay nada más para pagar.</p>
+      </div>
+      <div class="arrow"><i class="eno-icon icon-arrow-down" aria-hidden="true"></i></div>
+      <div style="background:var(--primary-soft);border-radius:16px;padding:18px 20px">
+        <div class="eyebrow" style="color:var(--primary)">Lo que llega a tu cuenta</div>
+        <p style="margin:8px 0 0;font:600 17px/24px var(--font-body)">Tus $ 50.000, menos la comisión de Mercado Pago.</p>
+      </div>
+      <p class="xxs tm" style="margin:16px 0 0">Los montos son de ejemplo. El cargo por servicio y la comisión de Mercado Pago pueden variar.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <h2 class="h-sec">Cómo empezar.</h2>
+    <div class="start-grid">
+      <div class="card start"><div class="start__top"><span class="start__ico"><i class="eno-icon icon-pen-line" aria-hidden="true"></i></span><span class="start__n">1</span></div><h3 class="h-card">Postulate</h3><p>Contanos quién sos, qué hacés y qué te gustaría ofrecer. Te lleva cinco minutos.</p></div>
+      <div class="card start"><div class="start__top"><span class="start__ico"><i class="eno-icon icon-badge-check" aria-hidden="true"></i></span><span class="start__n">2</span></div><h3 class="h-card">Revisamos tu perfil</h3><p>El equipo lee tu postulación y, si encaja con esta etapa, te da acceso.</p></div>
+      <div class="card start"><div class="start__top"><span class="start__ico"><i class="eno-icon icon-share-2" aria-hidden="true"></i></span><span class="start__n">3</span></div><h3 class="h-card">Armás tu espacio y empezás</h3><p>Compartís tu link en la bio y tu comunidad te empieza a seguir.</p></div>
+    </div>
+    <div style="margin-top:24px;max-width:640px">
+      <div class="eno-notice eno-notice--info"><i class="eno-icon icon-info" aria-hidden="true"></i><div><b>En el lanzamiento, el cupo de creadores es limitado y curado.</b><p>Queremos acompañar de cerca a cada uno.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" class="sec" style="background:var(--surface);border-top:1px solid var(--border)">
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:48px 64px;align-items:flex-start">
+    <div style="flex:1 1 300px;min-width:0">
+      <h2 class="h-sec">Preguntas frecuentes</h2>
+      <p class="t2" style="margin:16px 0 0">¿Te quedó alguna duda? Escribinos a <a href="mailto:creadores@enosfera.example" style="font-weight:600">creadores@enosfera.example</a></p>
+    </div>
+    <div class="faq">
+      <details name="faq" open><summary><span>¿Cuánto cuesta?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>Unirte es gratis. El cargo por servicio lo paga quien compra y ya está incluido en el precio final que ve.</p></details>
+      <details name="faq"><summary><span>¿Necesito ser monotributista para empezar?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>No. Para vender hace falta tener CUIT y conectar tu cuenta de Mercado Pago, pero eso te lo pedimos recién cuando publiques tu primer producto pago.</p></details>
+      <details name="faq"><summary><span>¿Cómo y cuándo cobro?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>En tu cuenta de Mercado Pago, según el plazo de acreditación que elijas ahí.</p></details>
+      <details name="faq"><summary><span>¿Cómo funciona una preventa?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>Vos definís la meta mínima y la fecha límite. Si no se llega a la meta, no se le cobra a nadie. Cada persona que compra recibe un vale digital único, que puede regalar o transferir y que canjea por el producto.</p></details>
+      <details name="faq"><summary><span>¿Qué recibe quien compra en una preventa?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>El producto o la recompensa que ofrecés, con un vale que lo respalda. Es una compra anticipada, no una inversión.</p></details>
+      <details name="faq"><summary><span>¿Qué pasa si cancelo una experiencia?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>Se les devuelve el 100 % a quienes compraron.</p></details>
+      <details name="faq"><summary><span>¿Qué pasa si un comprador se arrepiente?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>Tiene derecho de arrepentimiento según la ley. Lo pide desde el Botón de arrepentimiento y la plataforma gestiona la devolución.</p></details>
+      <details name="faq"><summary><span>¿El contenido es mío?</span><i class="eno-icon icon-plus i-plus" aria-hidden="true"></i><i class="eno-icon icon-minus i-minus" aria-hidden="true"></i></summary><p>Sí. Todo lo que publicás es tuyo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--112 sec--soft">
+  <div style="max-width:880px;margin:0 auto;display:flex;flex-direction:column;align-items:center;text-align:center">
+    <svg width="56" height="56" viewBox="0 0 64 64" aria-hidden="true"><path d="M6.08 30 55.06 44A26 26 0 0 1 6.08 30Z" fill="var(--logo-liquid)"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--logo-ring)" stroke-width="6"/></svg>
+    <h2 class="h-hero" style="margin-top:28px">Seguí haciendo crecer tu comunidad. Lo que viene lo hacen juntos.</h2>
+    <p class="lead" style="margin-top:20px;max-width:580px">La próxima cata, el curso que venís pensando, esa línea que todavía no embotellaste. Empezá por darle a tu comunidad un lugar donde seguir creciendo.</p>
+    <div style="margin-top:40px"><button type="button" class="eno-btn eno-btn--primary" data-open>Postulate como creador<i class="eno-icon icon-arrow-right" style="font-size:18px" aria-hidden="true"></i></button></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <span class="eno-logo" role="img" aria-label="Enosfera"><svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true"><path d="M6.08 30 55.06 44A26 26 0 0 1 6.08 30Z" fill="var(--logo-liquid)"/><circle cx="32" cy="32" r="26" fill="none" stroke="var(--logo-ring)" stroke-width="6"/></svg><span style="font-size:23.4px">enosfera</span></span>
+        <div class="xs t2" style="margin-top:14px;display:flex;align-items:center;gap:6px"><i class="eno-icon icon-map-pin" style="font-size:16px" aria-hidden="true"></i>Hecho en Mendoza</div>
+      </div>
+      <nav aria-label="Legales" class="footer-legal">
+        <a class="focusable" href="#terminos">Términos y condiciones</a>
+        <a class="focusable" href="#privacidad">Política de privacidad</a>
+        <a class="eno-regret focusable" href="#arrepentimiento"><i class="eno-icon icon-undo-2" aria-hidden="true"></i>Botón de arrepentimiento</a>
+      </nav>
+      <div class="social">
+        <a class="focusable" href="#instagram" aria-label="Instagram"><i class="eno-icon icon-instagram" aria-hidden="true"></i></a>
+        <a class="focusable" href="#youtube" aria-label="YouTube"><i class="eno-icon icon-youtube" aria-hidden="true"></i></a>
+        <a class="focusable" href="mailto:creadores@enosfera.example" aria-label="Email"><i class="eno-icon icon-mail" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Beber con moderación. Prohibida su venta a menores de 18 años.</span>
+      <span>© 2026 Enosfera</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="m-t">
+  <div class="sheet">
+    <button type="button" class="modal__close focusable" aria-label="Cerrar" data-close><i class="eno-icon icon-x" aria-hidden="true"></i></button>
+
+    <form class="form" id="form" novalidate>
+      <div>
+        <span class="eno-tag eno-tag--exclusivo"><i class="eno-icon icon-mail" aria-hidden="true"></i>Cupo limitado</span>
+        <h2 id="m-t">Postulate como creador</h2>
+        <p class="t2" style="margin:0">Contanos quién sos y qué hacés. Leemos cada postulación y te respondemos.</p>
+      </div>
+
+      <div class="eno-notice eno-notice--error" role="alert" id="n-server" hidden><i class="eno-icon icon-circle-alert" aria-hidden="true"></i><div><b>No pudimos enviar tu postulación.</b><p>Lo que escribiste sigue acá. Probá de nuevo en un momento.</p></div></div>
+      <div class="eno-notice eno-notice--error" role="alert" id="n-fields" hidden><i class="eno-icon icon-circle-alert" aria-hidden="true"></i><div><b>Faltan algunos datos.</b><p>Revisá los campos marcados y volvé a enviar.</p></div></div>
+
+      <div class="form-grid">
+        <div class="eno-field" data-field="nombre"><label for="f-nombre">Nombre</label><div class="eno-field__box"><input id="f-nombre" name="nombre" placeholder="Cómo te conocen" autocomplete="name"></div><span class="eno-field__hint" hidden></span></div>
+        <div class="eno-field" data-field="email"><label for="f-email">Email</label><div class="eno-field__box"><input id="f-email" name="email" type="email" placeholder="vos@ejemplo.com" autocomplete="email"></div><span class="eno-field__hint" hidden></span></div>
+        <div class="eno-field" data-field="whatsapp"><label for="f-whatsapp">WhatsApp</label><div class="eno-field__box"><i class="eno-icon icon-phone" aria-hidden="true"></i><input id="f-whatsapp" name="whatsapp" type="tel" placeholder="261 555 0123" autocomplete="tel"></div><span class="eno-field__hint" hidden></span></div>
+        <div class="group" data-field="provincia" style="gap:6px">
+          <label for="f-prov" class="group__l">Provincia</label>
+          <select id="f-prov" name="provincia" class="ctl"><option value="">Elegí tu provincia</option></select>
+          <span class="err" hidden></span>
+        </div>
+      </div>
+
+      <div class="group" role="group" aria-label="Tipo de creador" data-field="tipo">
+        <span class="group__l">Tipo de creador</span>
+        <div class="chips" data-chips="tipo" data-mode="single"></div>
+        <span class="err" hidden></span>
+      </div>
+
+      <div class="eno-field" data-field="red"><label for="f-red">Link de Instagram o red principal</label><div class="eno-field__box"><i class="eno-icon icon-link" aria-hidden="true"></i><input id="f-red" name="red" placeholder="instagram.com/tu.usuario"></div><span class="eno-field__hint" hidden></span></div>
+
+      <div class="group" role="group" aria-label="Cantidad aproximada de seguidores">
+        <span class="group__l">Cantidad aproximada de seguidores</span>
+        <div class="chips" data-chips="seguidores" data-mode="single"></div>
+        <span class="xxs tm">No hay un mínimo. Nos sirve para conocerte.</span>
+      </div>
+
+      <div class="group" role="group" aria-label="Qué te interesa ofrecer">
+        <span class="group__l">¿Qué te interesa ofrecer? <span style="font-weight:400;color:var(--text-muted)">Podés elegir más de una.</span></span>
+        <div class="chips" data-chips="intereses" data-mode="multi"></div>
+      </div>
+
+      <div class="eno-field" id="w-preventa" hidden><label for="f-preventa">¿Qué producto lanzarías y para cuándo?</label><div class="eno-field__box"><i class="eno-icon icon-ticket" aria-hidden="true"></i><input id="f-preventa" name="preventa" placeholder="Por ejemplo: una línea de criolla, para la cosecha 2027"></div></div>
+
+      <div class="group" style="gap:6px">
+        <label for="f-hoy" class="group__l">¿Cómo vendés hoy?</label>
+        <textarea id="f-hoy" name="hoy" rows="2" maxlength="280" class="ctl" placeholder="Por ejemplo: armo las catas por WhatsApp y cobro por transferencia."></textarea>
+      </div>
+
+      <div data-field="acepta">
+        <label class="eno-check"><input type="checkbox" id="f-acepta" name="acepta"><span class="eno-check__box"><i class="eno-icon icon-check" aria-hidden="true"></i></span><span>Declaro que soy mayor de 18 años y acepto la política de privacidad.</span></label>
+        <span class="err" style="display:block;margin-left:36px" hidden></span>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
+        <button type="submit" class="eno-btn eno-btn--primary" id="submit">Enviar postulación</button>
+        <span class="xxs tm" style="flex:1;min-width:200px">Postularte es gratis y no te compromete a nada.</span>
+      </div>
+    </form>
+
+    <div class="success" id="success" hidden>
+      <span class="success__ico"><i class="eno-icon icon-circle-check" aria-hidden="true"></i></span>
+      <h2>¡Recibimos tu postulación!</h2>
+      <p class="t2" style="margin:0;max-width:420px">Te escribimos pronto. La vamos a leer con atención y te respondemos por email o por WhatsApp.</p>
+      <div style="margin-top:16px"><button type="button" class="eno-btn eno-btn--secondary" data-close>Listo</button></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="assets/js/landing.js"></script>
 </body>
 </html>
