@@ -12,6 +12,7 @@ Repositorio de la plataforma Enosfera. Por ahora contiene la landing de prelanza
 - `assets/css/tokens.css` — tokens y componentes del sistema de diseño de Enosfera (copiados del handoff de diseño; no editar a mano).
 - `assets/css/landing.css` — estilos propios de la landing.
 - `assets/js/landing.js` — modal de postulación, validación del formulario y gráfico de comunidades.
+- `scripts/google-sheets/Code.gs` — script de Google Apps Script que guarda cada postulación como fila en una planilla. Se pega en la planilla (Extensiones → Apps Script) y se implementa como aplicación web; su URL `/exec` va en `ENDPOINT`.
 - `scripts/dev-server.js` — servidor local para previsualizar: `node scripts/dev-server.js` → http://localhost:4322
 
 ## Pendientes antes de difundir

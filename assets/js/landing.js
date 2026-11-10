@@ -2,7 +2,8 @@
 (function () {
   'use strict';
 
-  // Dirección a la que se envían las postulaciones (POST con JSON).
+  // Dirección a la que se envían las postulaciones: la URL /exec del script de
+  // Google Sheets (ver scripts/google-sheets/Code.gs).
   // Mientras esté vacía, el formulario valida pero no envía nada y muestra el aviso de error.
   // Para revisar los estados sin backend: agregar ?demo=ok o ?demo=error a la URL.
   var ENDPOINT = '';
@@ -101,7 +102,8 @@
       intereses: picked('intereses'),
       preventa: wPreventa.hidden ? '' : form.preventa.value.trim(),
       hoy: form.hoy.value.trim(),
-      acepta: form.acepta.checked
+      acepta: form.acepta.checked,
+      sitio: form.sitio.value
     };
   }
 
@@ -170,11 +172,15 @@
     if (!ENDPOINT) {
       return new Promise(function (_, rej) { setTimeout(rej, 600); });
     }
+    // Apps Script no acepta el preflight de CORS: el JSON viaja como text/plain.
     return fetch(ENDPOINT, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(v)
-    }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); });
+    }).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    }).then(function (res) { if (!res || res.ok !== true) throw new Error('rechazado'); });
   }
 
   /* ---------- Modal ---------- */
