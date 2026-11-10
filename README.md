@@ -15,9 +15,9 @@ Repositorio de la plataforma Enosfera. Por ahora contiene la landing de prelanza
 - `scripts/google-sheets/Code.gs` — script de Google Apps Script que guarda cada postulación como fila en una planilla. Se pega en la planilla (Extensiones → Apps Script) y se implementa como aplicación web; su URL `/exec` va en `ENDPOINT`.
 - `scripts/dev-server.js` — servidor local para previsualizar: `node scripts/dev-server.js` → http://localhost:4322
 
-## Pendientes antes de difundir
+## Estado y pendientes antes de difundir
 
-- **Formulario sin backend.** `ENDPOINT` en `assets/js/landing.js` está vacío: el formulario valida pero no envía nada y muestra el aviso de error. Para ver los estados sin backend, abrir la página con `?demo=ok` o `?demo=error`.
+- **Formulario conectado a Google Sheets.** Las postulaciones se guardan en la planilla "Enosfera · Postulaciones de creadores" (hoja "Postulaciones"). Para revisar los estados sin enviar nada, abrir la página con `?demo=ok` o `?demo=error`. Si se cambia `Code.gs`, hay que pegarlo en Apps Script y crear una versión nueva de la implementación.
 - **Fotos.** Las seis fotos son placeholders con la descripción de la toma esperada.
 - **Contacto y links provisorios.** `creadores@enosfera.example`, redes, Términos, Privacidad y Botón de arrepentimiento.
 - **Cargo por servicio.** El ejemplo de $ 50.000 → $ 55.000 es ilustrativo y no está confirmado.

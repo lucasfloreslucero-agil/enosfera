@@ -6,7 +6,7 @@
   // Google Sheets (ver scripts/google-sheets/Code.gs).
   // Mientras esté vacía, el formulario valida pero no envía nada y muestra el aviso de error.
   // Para revisar los estados sin backend: agregar ?demo=ok o ?demo=error a la URL.
-  var ENDPOINT = '';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbwHTuY755yx46cH7XBBysmRcGmWrUHfk3t2IgH54J34weBxGDYqIkGmimZyFfd_MGW8rg/exec';
   var DEMO = new URLSearchParams(location.search).get('demo');
 
   var PREVENTA = 'Preventa de una línea';
