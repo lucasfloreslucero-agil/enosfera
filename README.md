@@ -18,7 +18,7 @@ Repositorio de la plataforma Enosfera. Por ahora contiene la landing de prelanza
 ## Estado y pendientes antes de difundir
 
 - **Formulario conectado a Google Sheets.** Las postulaciones se guardan en la planilla "Enosfera · Postulaciones de creadores" (hoja "Postulaciones"). Para revisar los estados sin enviar nada, abrir la página con `?demo=ok` o `?demo=error`. Si se cambia `Code.gs`, hay que pegarlo en Apps Script y crear una versión nueva de la implementación.
-- **Fotos.** Las seis fotos son placeholders con la descripción de la toma esperada.
+- **Fotos.** Las seis fotos están en `assets/img/`, recortadas y sin metadatos. Vienen de las carpetas de Drive del proyecto (cuatro de "Imágenes", dos de "Fotos Antropo") y se eligieron sin marca ni caras visibles. Son provisorias hasta tener un banco propio.
 - **Contacto y links provisorios.** `creadores@enosfera.example`, redes, Términos, Privacidad y Botón de arrepentimiento.
 - **Cargo por servicio.** El ejemplo de $ 50.000 → $ 55.000 es ilustrativo y no está confirmado.
 - **Sacar `noindex`** de `index.html` cuando la landing esté lista.
